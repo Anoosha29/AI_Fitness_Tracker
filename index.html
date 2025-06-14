@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitGenius - AI-Powered Fitness Optimization</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo">
+            <i class="fas fa-robot logo-icon"></i>
+            FitGenius
+        </a>
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#bmi">BMI Calculator</a>
+            <a href="#progress">Progress</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#footer">Contact</a>
+        </nav>
+        <button class="cta-button">Get Started</button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Sticky CTA -->
+    <button class="sticky-cta" id="stickyCta">
+        <i class="fas fa-rocket"></i> Start Free Trial
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Fitness with <span>AI Precision</span></h1>
+            <p>FitGenius leverages cutting-edge artificial intelligence to create personalized nutrition and workout plans tailored to your unique body, goals, and lifestyle.</p>
+            <div class="hero-buttons">
+                <button class="cta-button">Start Your Journey</button>
+                <button class="secondary-button">
+                    <i class="fas fa-play-circle"></i> Watch Demo
+                </button>
+            </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Fitness App Dashboard" class="hero-image">
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2 class="section-title">Smart Fitness Solutions</h2>
+            <p class="section-subtitle">Our AI-powered platform adapts to your needs, providing real-time adjustments for optimal results</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Personalized Goal Setting</h3>
+                <p>Our AI analyzes your body type, metabolism, and lifestyle to create achievable milestones tailored just for you.</p>
+                <a href="#" class="feature-link">
+                    Learn more <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Dynamic Meal Planning</h3>
+                <p>Get customized nutrition plans that evolve with your progress, preferences, and dietary restrictions.</p>
+                <a href="#" class="feature-link">
+                    Learn more <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>Adaptive Workouts</h3>
+                <p>Workout routines that adjust based on your performance, recovery, and available equipment.</p>
+                <a href="#" class="feature-link">
+                    Learn more <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMI Calculator -->
+    <section class="bmi-calculator" id="bmi">
+        <div class="calculator-container">
+            <h3>Smart Body Analysis</h3>
+            <div class="input-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" placeholder="Enter your height">
+            </div>
+            <div class="input-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" placeholder="Enter your weight">
+            </div>
+            <button class="cta-button" id="calculateBmi">Analyze My Body</button>
+            <div class="bmi-result" id="bmiResult">
+                <div class="bmi-value" id="bmiValue">24.2</div>
+                <div class="bmi-category" id="bmiCategory">Normal Weight</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Bars -->
+    <section class="progress-section" id="progress">
+        <div class="progress-container">
+            <h3>Your Daily Nutrition Dashboard</h3>
+            <div class="progress-bar calories">
+                <div class="progress-label">
+                    <span>Calories</span>
+                    <span id="caloriesValue">1200/2000 kcal</span>
+                </div>
+                <div class="progress-bg">
+                    <div class="progress-fill" id="caloriesFill"></div>
+                </div>
+            </div>
+            <div class="progress-bar protein">
+                <div class="progress-label">
+                    <span>Protein</span>
+                    <span id="proteinValue">80/150g</span>
+                </div>
+                <div class="progress-bg">
+                    <div class="progress-fill" id="proteinFill"></div>
+                </div>
+            </div>
+            <div class="progress-bar carbs">
+                <div class="progress-label">
+                    <span>Carbs</span>
+                    <span id="carbsValue">150/250g</span>
+                </div>
+                <div class="progress-bg">
+                    <div class="progress-fill" id="carbsFill"></div>
+                </div>
+            </div>
+            <div class="progress-bar fats">
+                <div class="progress-label">
+                    <span>Fats</span>
+                    <span id="fatsValue">40/70g</span>
+                </div>
+                <div class="progress-bg">
+                    <div class="progress-fill" id="fatsFill"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-subtitle">Join thousands who have transformed their health with our AI-powered platform</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">FitGenius completely changed my relationship with fitness. The personalized meal plans made healthy eating enjoyable, and the adaptive workouts kept me challenged without feeling overwhelmed.</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J." class="author-avatar">
+                    <div class="author-info">
+                        <h4>Sarah J.</h4>
+                        <p>Lost 28 lbs in 3 months</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">As someone who hated generic workout plans, FitGenius was a revelation. The AI understood my progress and adjusted my routines perfectly. I've gained more muscle in 4 months than I did in 2 years of trying on my own.</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Michael T." class="author-avatar">
+                    <div class="author-info">
+                        <h4>Michael T.</h4>
+                        <p>Gained 15 lbs of muscle</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">The nutrition planner is worth the subscription alone. It accounts for my food allergies and preferences while still helping me hit my macros. I've never felt better or had more energy in my life!</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K." class="author-avatar">
+                    <div class="author-info">
+                        <h4>Priya K.</h4>
+                        <p>Maintained goal weight for 1+ year</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Transform Your Fitness?</h2>
+            <p>Join thousands of users who have achieved their health goals with our AI-powered platform. Start your 14-day free trial today - no credit card required.</p>
+            <button class="cta-button">Start Free Trial</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>FitGenius</h4>
+                <p>Revolutionizing fitness through artificial intelligence. Personalized meal plans and workout schedules tailored just for you.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Workouts</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Licenses</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get fitness tips and special offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FitGenius. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
